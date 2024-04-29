@@ -1,38 +1,62 @@
-.App {
+
+body {
+  font-family: Arial, sans-serif; /* Set a default font for the entire app */
+  margin: 0;
+  padding: 0;
+}
+
+/* Define your theme */
+:root {
+  --primary-color: #ffa500; /* Orange color for primary elements */
+  --background-color: #333; /* Dark background color */
+  --text-color: #fff; /* White text color */
+}
+
+/* Apply theme to specific elements */
+.navbar {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+}
+
+.nav-link {
+  color: var(--text-color);
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+
+
+
+
+
+.video-container {
+  position: relative;
+  /* width: 800px; */
+  height: 300px;
+  overflow: hidden;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  color: #ffa500;
+}
+.bg-black{
+  background-color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

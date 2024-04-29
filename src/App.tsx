@@ -1,26 +1,38 @@
+// App.tsx
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import Dashboard from './components/Dashboard';
+import ContactDetails from './components/ContactDetails';
+import AboutUs from './components/AboutUs';
+// import Header from './components/ui-comps/Header';
+import './App.css'; // Import your CSS file
+import HomePage from './components/HomePage';
+import PageWithPicBackground from './components/PageWithPicBackground';
 
-function App() {
+const App: React.FC = () => {
+  // const [darkMode, setDarkMode] = useState(false);
+
+  // const toggleDarkMode = () => {
+  //   setDarkMode(prevMode => !prevMode);
+  // };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className={`app-dark` }> {/* Add conditional class */}
+        {/* <Header /> */}
+        {/* <button onClick={toggleDarkMode}>Toggle Dark Mode</button> */}
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/vision" element={<PageWithPicBackground />} />
+
+          
+          {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+          <Route path="/contact" element={<ContactDetails />} />
+          <Route path="/about" element={<AboutUs />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

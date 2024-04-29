@@ -1,0 +1,41 @@
+/* AboutUs.css */
+.about-container {
+    padding: 20px;
+    background-color: var(--background-color); /* Use the same theme background color */
+    color: var(--text-color); /* Use the same theme text color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+  }
+  
+  .about-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .about-content {
+    line-height: 1.6;
+  }
+  /* ContactDetails.css */
+.contact-container {
+    padding: 20px;
+    background-color: var(--background-color); /* Use the same theme background color */
+    color: var(--text-color); /* Use the same theme text color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+  }
+  
+  .contact-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info {
+    line-height: 1.6;
+  }
+  
+  .bg-vid{
+    height: 1000px;
+    width: 100%;
+  }
