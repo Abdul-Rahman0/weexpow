@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
+
+/* CSS RESET */
+.new-page-container * {
+  box-sizing: border-box;
+}
+
+.new-page-container body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+
+  overflow-x: hidden;
+  background-color: #080202;
+  color: #fff;
+}
+
+.new-page-container h1,
+.new-page-container h2,
+.new-page-container h3,
+.new-page-container h4,
+.new-page-container h5,
+.new-page-container h6,
+.new-page-container p,
+.new-page-container hr {
+  margin: 0;
+  padding: 0;
+}
+
+.new-page-container p {
+  margin: 20px 0;
+  font-size: 20px;
+  line-height: 2;
+  font-weight: 200;
+}
+
+.new-page-container img {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+/* CLASS STYLES */
+.new-page-container .main-section {
+  padding: 70px 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.new-page-container .img_container {
+  width: 100%;
+  height: 80vh;
+}
+
+.new-page-container .img_container img,
+.new-page-container .tWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.new-page-container .anime_img {
+  object-fit: cover;
+  animation: img_key linear forwards;
+  animation-timeline: view(block);
+  animation-range: cover 0% cover 20%;
+}
+
+.new-page-container .top_img {
+  position: relative;
+}
+
+.new-page-container .top_img img {
+  position: absolute;
+  z-index: -1;
+  animation: fade-out linear forwards;
+  /* animation-timeline that connects animation to scroll */
+  animation-timeline: view();
+  animation-range: exit;
+  top: 0px;
+}
+
+.new-page-container .img_container.top_img {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.new-page-container section .tWrap {
+  perspective: 1000px;
+}
+
+.new-page-container .box {
+  animation: noTransformAnim linear forwards normal;
+  animation-timeline: view();
+  transform: rotateX(40deg);
+  opacity: 0;
+}
+
+@keyframes noTransformAnim {
+  50% { transform: none; opacity: 1; }
+  100% { transform: none; opacity: 1; }
+}
+
+@keyframes img_key {
+  0% { clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%); }
+  100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+}
+
+@keyframes fade-out {
+  100% { opacity: 0; scale: 1.5; }
+}
+/* NewPageStyles.css */
+
+.normal-description {
+    margin: 20px 0;
+    font-size: 20px;
+    line-height: 1.5;
+    color: white; /* Change color as needed */
+  }
+  
+  .contact-description {
+    margin: 20px 0;
+    padding: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff; /* Change color as needed */
+    background-color: #007bff; /* Change background color for "Contact Us" description */
+  }
+  
